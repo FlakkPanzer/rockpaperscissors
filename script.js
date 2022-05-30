@@ -1,3 +1,5 @@
+let computerSelection = 0;
+let playerSelection = 0;
 const rpsArray = ["rock", "paper", "scissors"]
 
 // This function returns a random index from rpsArray
@@ -8,3 +10,7 @@ function computerPlay()
     return rpsArray[Math.floor(Math.random()*rpsArray.length)]
 }
 
+function round(playerSelection, computerSelection) 
+{
+
+}
