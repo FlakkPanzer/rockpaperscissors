@@ -1,7 +1,8 @@
-let computerSelection = 0;
-let playerSelection = 0;
+let computerSelection = "";
+let playerSelection = "";
 let computerScore = 0;
 let playerScore = 0;
+let roundOutcome = "";
 const rpsArray = ["rock", "paper", "scissor"]
 
 // This function returns a random index from rpsArray.
@@ -57,8 +58,9 @@ function game()
 {
     for (let i = 0; i < 5; i++)
     {
-        playerSelection = window.prompt("Enter 'rock', 'paper' or scissor:");
-        playRound(playerSelection, computerPlay());
+        playerSelection = window.prompt("Enter 'rock', 'paper' or 'scissor':");
+        roundOutcome = playRound(playerSelection, computerPlay());
+        console.log(roundOutcome);
     }
 
     if (playerScore > computerScore)
@@ -76,4 +78,6 @@ function game()
         console.log("You and the computer have tied in a game best of five. Play again!");
     }
 }
+
+game();
 
